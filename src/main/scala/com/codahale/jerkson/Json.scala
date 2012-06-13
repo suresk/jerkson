@@ -5,7 +5,7 @@ import com.fasterxml.jackson.core.{JsonGenerator, JsonParser => JacksonParser}
 
 object Json extends Json
 
-trait Json extends Parser with Generator {
+trait Json extends Parser with Generator with PrettyPrinter {
   protected val classLoader = Thread.currentThread().getContextClassLoader
 
   protected val mapper = new ObjectMapper
